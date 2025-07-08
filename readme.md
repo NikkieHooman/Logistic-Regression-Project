@@ -8,13 +8,12 @@
   <i>PyTorch implementation of our MLHC&nbsp;2025 paper<br>
   “Equitable Electronic Health Record Prediction with&nbsp;FAME”</i>
 </p>
+
 <p align="center">
   <a href="https://arxiv.org/abs/2506.13104">
     <img src="https://img.shields.io/badge/arXiv-2506.13104-b31b1b.svg" alt="arXiv:2506.13104">
   </a>
-  <a href="https://github.com/your-org/FAME/actions">
-    <img src="https://github.com/your-org/FAME/workflows/CI/badge.svg" alt="CI status">
-  </a>
+
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT license">
   </a>
