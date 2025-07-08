@@ -3,19 +3,30 @@
 <!-- ==================================================================== -->
 
 <p align="center">
-  <<img width="1075" alt="Screenshot 2025-07-07 at 3 07 03 PM" src="https://github.com/user-attachments/assets/b3f603fa-b594-4723-bf5f-d8a5bacbf384" />
-><br>
+  <img width="1075"
+       alt="FAME architecture"
+       src="https://github.com/user-attachments/assets/b3f603fa-b594-4723-bf5f-d8a5bacbf384" />
+  <br>
   <b>FAME · Fairness-Aware Multimodal Embedding</b><br>
   <i>PyTorch implementation of our MLHC 2025 paper<br>
      “Equitable Electronic Health Record Prediction with FAME”</i>
 </p>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2506.13104"><img src="https://img.shields.io/badge/arXiv-2506.13104-b31b1b"></a>
-  <a href="https://github.com/<your-org>/FAME/actions"><img src="https://github.com/<your-org>/FAME/workflows/CI/badge.svg"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green"></a>
-  <a href="https://pytorch.org"><img src="https://img.shields.io/badge/PyTorch-2.1%20%2B-ee4c2c"></a>
+  <a href="https://arxiv.org/abs/2506.13104">
+    <img src="https://img.shields.io/badge/arXiv-2506.13104-b31b1b">
+  </a>
+  <a href="https://github.com/&lt;your-org&gt;/FAME/actions">
+    <img src="https://github.com/&lt;your-org&gt;/FAME/workflows/CI/badge.svg">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-green">
+  </a>
+  <a href="https://pytorch.org">
+    <img src="https://img.shields.io/badge/PyTorch-2.1%20%2B-ee4c2c">
+  </a>
 </p>
+
 
 ---
 
