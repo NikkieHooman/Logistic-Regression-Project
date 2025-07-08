@@ -1,29 +1,31 @@
-<!-- ==================================================================== -->
-<!--  README for FAME: Fairness-Aware Multimodal Embedding                -->
-<!-- ==================================================================== -->
+<!-- ================================================================ -->
+<!--  README header – FAME: Fairness-Aware Multimodal Embedding       -->
+<!-- ================================================================ -->
 
 <p align="center">
-  <img width="1075"
-       alt="FAME architecture"
-       src="https://github.com/user-attachments/assets/b3f603fa-b594-4723-bf5f-d8a5bacbf384" />
-  <br>
+  <!-- ▶ Replace the “src” with the relative-path or raw-GitHub URL of your figure -->
+  <img src="docs/figures/fame_architecture.png" alt="FAME architecture overview"
+       width="75%">
+
+  <br><br>
   <b>FAME · Fairness-Aware Multimodal Embedding</b><br>
   <i>PyTorch implementation of our MLHC 2025 paper<br>
      “Equitable Electronic Health Record Prediction with FAME”</i>
 </p>
 
 <p align="center">
+  <!-- Badges -------------------------------------------------------- -->
   <a href="https://arxiv.org/abs/2506.13104">
-    <img src="https://img.shields.io/badge/arXiv-2506.13104-b31b1b">
+    <img src="https://img.shields.io/badge/arXiv-2506.13104-b31b1b.svg" alt="arXiv">
   </a>
-  <a href="https://github.com/&lt;your-org&gt;/FAME/actions">
-    <img src="https://github.com/&lt;your-org&gt;/FAME/workflows/CI/badge.svg">
+  <a href="https://github.com/<your-org>/FAME/actions">
+    <img src="https://github.com/<your-org>/FAME/workflows/CI/badge.svg" alt="CI">
   </a>
   <a href="LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-green">
+    <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License">
   </a>
   <a href="https://pytorch.org">
-    <img src="https://img.shields.io/badge/PyTorch-2.1%20%2B-ee4c2c">
+    <img src="https://img.shields.io/badge/PyTorch-2.1 %2B-ee4c2c.svg" alt="PyTorch ≥ 2.1">
   </a>
 </p>
 
