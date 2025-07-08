@@ -1,6 +1,5 @@
 <!-- ================================================================ -->
 <!--  README – FAME: Fairness-Aware Multimodal Embedding              -->
-<!--  Place this file at the repo root                                -->
 <!-- ================================================================ -->
 
 <p align="center">
