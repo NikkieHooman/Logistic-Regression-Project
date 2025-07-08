@@ -3,7 +3,8 @@
 <!-- ==================================================================== -->
 
 <p align="center">
-  <img src="docs/figures/fame_logo.svg" height="140"><br>
+  <<img width="1075" alt="Screenshot 2025-07-07 at 3 07 03 PM" src="https://github.com/user-attachments/assets/b3f603fa-b594-4723-bf5f-d8a5bacbf384" />
+><br>
   <b>FAME · Fairness-Aware Multimodal Embedding</b><br>
   <i>PyTorch implementation of our MLHC 2025 paper<br>
      “Equitable Electronic Health Record Prediction with FAME”</i>
