@@ -1,4 +1,3 @@
-
 <!-- ================================================================ -->
 <!--  README – FAME: Fairness-Aware Multimodal Embedding              -->
 <!--  Place this file at the repo root                                -->
@@ -6,9 +5,8 @@
 
 <p align="center">
   <!-- Hero / architecture figure (replace with your own if you like) -->
-  <img src="docs/figures/fame_hero.png"
-       alt="FAME architecture overview"
-       width="75%">
+  <img width="1075" alt="Screenshot 2025-07-07 at 3 07 03 PM" src="https://github.com/user-attachments/assets/497f1821-ff3c-4eda-b1c7-5af0d11edb07" />
+
   <br><br>
   <b>FAME · Fairness-Aware Multimodal Embedding</b><br>
   <i>PyTorch implementation of our MLHC 2025 paper<br>
@@ -32,16 +30,23 @@
 
 ---
 
-## 📑 Table of Contents
-1. [Overview](#overview)   •   2. [Key Features](#key-features) • 3. [Architecture](#architecture)  
-4. [Folder Structure](#folder-structure) • 5. [Quick Start](#quick-start) • 6. [Data Preparation](#data-preparation)  
-7. [Training & Evaluation](#training--evaluation) • 8. [Expected Results](#expected-results) • 9. [Custom Use](#custom-use)  
-10. [Contributing](#contributing) • 11. [Changelog](#changelog) • 12. [Citation](#citation)  
-13. [License](#license) • 14. [Contact](#contact)
+## Table of Contents
 
+1. [Overview](#overview)
+2. [Key Features](#key-features)
+3. [Architecture](#architecture)
+4. [Folder Structure](#folder-structure)
+5. [Quick Start](#quick-start)
+6. [Data Preparation](#data-preparation)
+7. [Training & Evaluation](#training--evaluation)
+8. [Expected Results](#expected-results)
+9. [Custom Use](#custom-use)
+10. [Citation](#citation)
+11. [License](#license)
+12. [Contact](#contact)
 ---
 
-## 🔍 Overview
+##  Overview
 **FAME** is a *fairness-aware* multimodal AI framework that fuses **structured EHR**, **clinical notes**, and **demographics** to make clinical predictions **without amplifying bias** across patient sub-groups (age, ethnicity, insurance).
 
 *Core idea*: **Weight each modality by how *fair* it is.**  
@@ -51,44 +56,41 @@ The repo reproduces every experiment in the paper—baselines, ablations & the f
 
 ---
 
-## ✨ Key Features
-| | |
-|---|---|
-| 🚀 **One-command pipeline** | From raw ICU tables to final metrics |
-| 📈 **Automatic fairness tracking** | EDDI & Equalized-Odds logged each epoch |
-| 🧰 **Out-of-the-box baselines** | DfC, AdvDebias, FPM, FairEHR-CLP |
-| 🔌 **Plug-and-play modalities** | Swap encoders or add new ones (e.g. imaging) |
-| 🔒 **Reproducible** | Seeds fixed, deterministic Torch ops where feasible |
+## Key Features
+
+* **One‑command pipeline**: from raw ICU tables to final metrics.
+* **Automatic fairness tracking**: EDDI & Equalized Odds logged each epoch.
+* **Out‑of‑the‑box baselines**: DfC, AdvDebias, FPM, FairEHR‑CLP.
+* **Plug‑and‑play modalities**: swap encoders or add new ones (e.g., imaging).
+* **Reproducible**: seeds set, deterministic Torch ops where possible.
+
 
 ---
 
-## 🖼️ Architecture
+##  Architecture
 *See the hero figure above.*  
 FAME combines **BEHRT** (structured), **BioClinicalBERT** (text) & demographic embeddings. A fusion layer multiplies each modality by a learnable *fairness weight* (EDDI-guided) plus a **sigmoid gate**, then optimises a joint **BCE + β·LEDDI** loss.
 
 ---
 
-## 📁 Folder Structure
-| Path | Purpose |
-|------|---------|
-| `00_data.py` | Extract & preprocess MIMIC (structured + notes) |
-| `01_BEHRT.py` | Baseline – BEHRT (structured-only) |
-| `02_BioClinicalBERT.py` | Baseline – BioClinicalBERT (text-only) |
-| `03_DfC.py` | Demographic-free baseline |
-| `04_AdvDebias.py` | Adversarial debiasing baseline |
-| `05_FPM.py` | Fair Patient Model baseline |
-| `06_FairEHR-CLP.py` | Contrastive debiasing baseline |
-| `07_multimodal_average_fusion.py` | Average-fusion ablation |
-| `08_multimodal_eddi_fusion.py` | EDDI-only fusion ablation |
-| `09_multimodal_sigmoid_fusion.py` | Sigmoid-only fusion ablation |
-| `10_FAME.py` | **Full FAME** model |
-| `docs/figures/` | Images for README / paper |
-| `tests/` | Unit tests & CI scripts |
-| `requirements.txt` | Python dependencies |
+| File / Folder | Description |
+|--------------|-------------|
+| [`00_data.py`](00_data.py) | Extract & preprocess MIMIC data (structured + notes) |
+| [`01_BEHRT.py`](01_BEHRT.py) | Baseline using BEHRT (structured EHR) |
+| [`02_BioClinicalBERT.py`](02_BioClinicalBERT.py) | Baseline using BioClinicalBERT (clinical notes) |
+| [`03_DfC.py`](03_DfC.py) | Demographic-free Classification baseline |
+| [`04_AdvDebias.py`](04_AdvDebias.py) | Adversarial debiasing baseline |
+| [`05_FPM.py`](05_FPM.py) | Fair Patient Model baseline |
+| [`06_FairEHR-CLP.py`](06_FairEHR-CLP.py) | Contrastive debiasing baseline |
+| [`07_multimodal_average_fusion.py`](07_multimodal_average_fusion.py) | Average fusion of three modalities |
+| [`08_multimodal_eddi_fusion.py`](08_multimodal_eddi_fusion.py) | EDDI-only fusion (no sigmoid) |
+| [`09_multimodal_sigmoid_fusion.py`](09_multimodal_sigmoid_fusion.py) | Sigmoid-only fusion (no EDDI) |
+| [`10_FAME.py`](10_FAME.py) | **Full FAME** – EDDI + Sigmoid + joint loss |
+| [`requirements.txt`](requirements.txt) | Python dependencies |
 
 ---
 
-## ⚡ Quick Start
+##  Quick Start
 > Tested on **Python ≥ 3.9** & **PyTorch ≥ 2.1** with a single GPU (≥ 12 GB VRAM).
 
 ```bash
@@ -115,7 +117,7 @@ CI runs `pytest` automatically on every push / PR.
 
 ---
 
-## 🗄️ Data Preparation
+##  Data Preparation
 
 1. **Download MIMIC-III v1.4 / MIMIC-IV** and pass the PhysioNet credentialing quiz.
    Place all `*.csv.gz` files in, e.g., `/mnt/mimic`.
@@ -140,7 +142,7 @@ CI runs `pytest` automatically on every push / PR.
 
 ---
 
-## 🏋️‍♂️ Training & Evaluation
+##  Training & Evaluation
 
 All scripts share **one CLI** – just change the filename:
 
@@ -215,7 +217,7 @@ On smaller GPUs, reduce `--bsz`, call `--freeze_backbone`, or pre-train modaliti
 
 ---
 
-## 🎯 Expected Results
+##  Expected Results
 
 <details>
 <summary>Paper (Table 3) – 5-run averages</summary>
@@ -230,7 +232,7 @@ On smaller GPUs, reduce `--bsz`, call `--freeze_backbone`, or pre-train modaliti
 
 ---
 
-## 🛠️ Custom Use
+##  Custom Use
 
 1. **Dataset** – implement `CustomDataset` in `data_loader.py` returning
    `structured`, `text`, `demo`, `label` *(+ `image`, etc.)*.
@@ -238,21 +240,10 @@ On smaller GPUs, reduce `--bsz`, call `--freeze_backbone`, or pre-train modaliti
 3. **Train** with `--image_encoder resnet50` (or your name).
    The fairness engine handles extra modalities automatically.
 
----
-
-## 🤝 Contributing
-
-PRs are welcome 🎉 – see **[`CONTRIBUTING.md`](CONTRIBUTING.md)** and abide by the **[Code of Conduct](CODE_OF_CONDUCT.md)**.
 
 ---
 
-## 📝 Changelog
-
-See **[`CHANGELOG.md`](CHANGELOG.md)**.
-
----
-
-## 📚 Citation
+##  Citation
 
 ```bibtex
 @misc{lastname2024fame,
@@ -266,13 +257,13 @@ See **[`CHANGELOG.md`](CHANGELOG.md)**.
 
 ---
 
-## ⚖️ License
+##  License
 
 Released under the **MIT License** – see [`LICENSE`](LICENSE).
 
 ---
 
-## 📨 Contact
+##  Contact
 
-Questions? Open an issue or email **[your.name@uni.edu](mailto:your.name@uni.edu)**.
+Questions? Open an issue or email **[nikkieh@smu.edu]**.
 
