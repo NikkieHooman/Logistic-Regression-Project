@@ -3,8 +3,9 @@
 <!-- ================================================================ -->
 
 <p align="center">
-  <!-- ▶ Replace the “src” with the relative-path or raw-GitHub URL of your figure -->
-  <img src="docs/figures/fame_architecture.png" alt="FAME architecture overview"
+  <!-- ▶ Put the image in docs/figures/ and reference it here         -->
+  <img src="docs/figures/fame_hero.png"
+       alt="FAME architecture overview"
        width="75%">
 
   <br><br>
@@ -14,18 +15,18 @@
 </p>
 
 <p align="center">
-  <!-- Badges -------------------------------------------------------- -->
+  <!-- ========== Badges ========== -->
   <a href="https://arxiv.org/abs/2506.13104">
     <img src="https://img.shields.io/badge/arXiv-2506.13104-b31b1b.svg" alt="arXiv">
   </a>
-  <a href="https://github.com/<your-org>/FAME/actions">
-    <img src="https://github.com/<your-org>/FAME/workflows/CI/badge.svg" alt="CI">
+  <a href="https://github.com/your-org/FAME/actions">
+    <img src="https://github.com/your-org/FAME/workflows/CI/badge.svg" alt="CI status">
   </a>
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License">
   </a>
   <a href="https://pytorch.org">
-    <img src="https://img.shields.io/badge/PyTorch-2.1 %2B-ee4c2c.svg" alt="PyTorch ≥ 2.1">
+    <img src="https://img.shields.io/badge/PyTorch-2.1%20%2B-ee4c2c.svg" alt="PyTorch ≥ 2.1">
   </a>
 </p>
 
